@@ -4,7 +4,7 @@
 	Plugin URI: https://gioxx.org/
 	Description: Widget personalizzati per la Sidebar di Gioxx's Wall.
 	Author: Gioxx
-	Version: 0.20
+	Version: 0.21
 	Author URI: https://gioxx.org
 	License: GPL3
 */
@@ -28,7 +28,7 @@ if ( !class_exists('gwplgUpdateChecker_wdg') ) {
 
 		public function __construct() {
 			$this->plugin_slug = plugin_basename( __DIR__ );
-			$this->version = '0.20';
+			$this->version = '0.21';
 			$this->cache_key = 'customwidgets_updater';
 			$this->cache_allowed = true;
 
@@ -656,65 +656,6 @@ class wdg_BancoProvaConsole extends WP_Widget {
   }
 } // Banco Prova Console terminato
 
-class wdg_FxAddonsUpdate extends WP_Widget {
-  function __construct() {
-    parent::__construct(
-      // widget ID
-      'gwallcustom_sidebar_fxaddonsupdate',
-      // widget name
-      __('(GX) Firefox Addons Updates', ' gwallcustom_widget_fxaddonsupdate'),
-      // widget description
-      array( 'description' => __( 'Mostra gli aggiornamenti dei componenti aggiuntivi per Firefox', 'gwallcustom_widget_fxaddonsupdate' ), )
-    );
-  }
-
-  public function widget( $args, $instance ) {
-    if ( !empty( $instance['title'] ) ) {
-      $title = apply_filters( 'widget_title', $instance['title'] );
-    } else {
-      $title = '';
-    }
-    echo $args['before_widget'];
-    //if title is present
-    if ( ! empty( $title ) )
-    echo $args['before_title'] . $title . $args['after_title'];
-    //output
-    $request = wp_safe_remote_get('https://gioxx.org/sub/amo.json');
-    if( is_wp_error( $request ) ) {
-      return false; // Bail early
-    }
-    $body = wp_remote_retrieve_body( $request );
-    $data = json_decode( $body );
-    if( ! empty( $data ) ) {
-      echo '<ul class="fa-ul fxaddonsupdate">';
-      foreach( $data->items as $item ) {
-        echo '<li><span class="fa-li"><i class="fab fa-firefox"></i></span> '. $item->description . '</li>';
-      }
-      echo '</ul>';
-    }
-    echo $args['after_widget'];
-  }
-  
-  public function form( $instance ) {
-    if ( isset( $instance[ 'title' ] ) )
-    $title = $instance[ 'title' ];
-    else
-    $title = __( 'Default Title', 'gwallcustom_widget_fxaddonsupdate' );
-    ?>
-    <p>
-      <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-      <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-    </p>
-    <?php
-  }
-  
-  public function update( $new_instance, $old_instance ) {
-    $instance = array();
-    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-    return $instance;
-  }
-} // Firefox Addons Updates terminato
-
 // Registrazione widget
 function src_load_widgets() {
     // Eventi particolari
@@ -725,7 +666,5 @@ function src_load_widgets() {
     register_widget( 'wdg_Evidenza' );
     register_widget( 'wdg_Eventi' );
     register_widget( 'wdg_BancoProvaConsole' );
-    // Extra (altre pagine)
-    register_widget( 'wdg_FxAddonsUpdate' );
 }
 add_action( 'widgets_init', 'src_load_widgets' );
