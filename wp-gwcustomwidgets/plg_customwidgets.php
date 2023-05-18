@@ -4,7 +4,7 @@
 	Plugin URI: https://gioxx.org/
 	Description: Widget personalizzati per la Sidebar di Gioxx's Wall.
 	Author: Gioxx
-	Version: 0.19
+	Version: 0.20
 	Author URI: https://gioxx.org
 	License: GPL3
 */
@@ -28,7 +28,7 @@ if ( !class_exists('gwplgUpdateChecker_wdg') ) {
 
 		public function __construct() {
 			$this->plugin_slug = plugin_basename( __DIR__ );
-			$this->version = '0.19';
+			$this->version = '0.20';
 			$this->cache_key = 'customwidgets_updater';
 			$this->cache_allowed = true;
 
@@ -222,7 +222,11 @@ class wdg_Covid19 extends WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
+    if ( !empty( $instance['title'] ) ) {
+      $title = apply_filters( 'widget_title', $instance['title'] );
+    } else {
+      $title = '';
+    }
     echo $args['before_widget'];
     $cv19posts_load = $instance[ 'cv19posts_load' ];
     //if title is present
@@ -307,7 +311,11 @@ class wdg_Donazioni extends WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
+    if ( !empty( $instance['title'] ) ) {
+      $title = apply_filters( 'widget_title', $instance['title'] );
+    } else {
+      $title = '';
+    }
     echo $args['before_widget'];
     //if title is present
     if ( ! empty( $title ) )
@@ -368,7 +376,11 @@ class wdg_BancoProva extends WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
+    if ( !empty( $instance['title'] ) ) {
+      $title = apply_filters( 'widget_title', $instance['title'] );
+    } else {
+      $title = '';
+    }
     echo $args['before_widget'];
     //if title is present
     if ( ! empty( $title ) )
@@ -456,7 +468,11 @@ class wdg_Evidenza extends WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
+    if ( !empty( $instance['title'] ) ) {
+      $title = apply_filters( 'widget_title', $instance['title'] );
+    } else {
+      $title = '';
+    }
     echo $args['before_widget'];
     //if title is present
     if ( ! empty( $title ) )
@@ -512,7 +528,11 @@ class wdg_Eventi extends WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
+    if ( !empty( $instance['title'] ) ) {
+      $title = apply_filters( 'widget_title', $instance['title'] );
+    } else {
+      $title = '';
+    }
     echo $args['before_widget'];
     //if title is present
     if ( ! empty( $title ) )
@@ -568,7 +588,11 @@ class wdg_BancoProvaConsole extends WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
+    if ( !empty( $instance['title'] ) ) {
+      $title = apply_filters( 'widget_title', $instance['title'] );
+    } else {
+      $title = '';
+    }
     echo $args['before_widget'];
     //if title is present
     if ( ! empty( $title ) )
