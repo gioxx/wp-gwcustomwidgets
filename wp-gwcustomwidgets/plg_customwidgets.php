@@ -328,14 +328,17 @@ class wdg_Donazioni extends WP_Widget {
 				<h2><i class="fas fa-hands-helping fa-lg"></i> Sostieni il blog</h2>
 			</div>
 
-			<p>Articoli sempre nuovi e <strong>approfondimenti</strong>, <strong>soluzioni</strong>, <strong>anteprime</strong>, Gioxx's Wall ti permette di risparmiare tanto tempo e leggere cose per te interessanti (o almeno ci prova!). Hai mai pensato di dare una mano alla sopravvivenza di questo progetto? Ti va di sostenere le mie attivit&agrave;? :-)
+			<p>Articoli sempre nuovi e <strong>approfondimenti</strong>, <strong>soluzioni</strong>, <strong>anteprime</strong>. Gioxx's Wall ti permette di risparmiare tempo e leggere cose per te interessanti (o almeno ci prova). Hai mai pensato di dare una mano alla sopravvivenza di questo progetto? :-)
 				<ul class="fa-ul gwalldonate">
-					<li><span class="fa-li"><i class="fab fa-paypal"></i></span><a href="https://paypal.me/gioxx" target="_blank" />Dona con PayPal</a></li>
-					<li><span class="fa-li"><i class="fas fa-hand-holding-usd"></i></span><a href="https://tag.satispay.com/gioxx" target="_blank" />Dona con Satispay</a></li>
-					<li><span class="fa-li"><i class="fas fa-coffee"></i></span><a href="https://ko-fi.com/gioxx" target="_blank" />Offrimi un caff&eacute; con Ko-fi</a></li>
-					<li><span class="fa-li"><i class="fas fa-coffee"></i></span><a href="https://www.buymeacoffee.com/gioxx" target="_blank" />Offrimi un caff&eacute; con Buy Me A Coffee</a></li>
-					<li><span class="fa-li"><i class="fab fa-patreon"></i></span><a href="https://www.patreon.com/gioxx" target="_blank" />Sostienimi con Patreon</a></li>
-					<li><span class="fa-li"><i class="fab fa-amazon"></i></span><a href="https://go.gioxx.org/acquista" target="_blank" />Acquista su Amazon</a></li>
+          <li><span class="fa-li"><i class="fab fa-amazon"></i></span><a href="https://go.gioxx.org/acquista" target="_blank" />Amazon (fai acquisti)</a></li>
+          <li><span class="fa-li"><i class="fas fa-coffee"></i></span><a href="https://ko-fi.com/gioxx" target="_blank" />Ko-fi (offrimi un caff&eacute;)</a></li>
+					<li><span class="fa-li"><i class="fas fa-hand-holding-usd"></i></span><a href="https://tag.satispay.com/gioxx" target="_blank" />Satispay (dona)</a></li>
+          <li><span class="fa-li"><i class="fab fa-paypal"></i></span><a href="https://paypal.me/gioxx" target="_blank" />PayPal (dona)</a></li>
+				</ul>
+        oppure
+        <ul class="fa-ul gwalldonate">
+					<li><span class="fa-li"><i class="fas fa-coffee"></i></span><a href="https://www.buymeacoffee.com/gioxx" target="_blank" />Buy Me A Coffee (offrimi un caff&eacute;)</a></li>
+					<li><span class="fa-li"><i class="fab fa-patreon"></i></span><a href="https://www.patreon.com/gioxx" target="_blank" />Patreon (Sostienimi)</a></li>
 				</ul>
 			</p>
 
