@@ -4,7 +4,7 @@
 	Plugin URI: https://gioxx.org/
 	Description: Widget personalizzati per la Sidebar di Gioxx's Wall.
 	Author: Gioxx
-	Version: 0.21
+	Version: 0.22
 	Author URI: https://gioxx.org
 	License: GPL3
 */

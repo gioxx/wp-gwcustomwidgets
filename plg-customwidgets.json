@@ -7,7 +7,7 @@
 	"version" : "0.22",
 	"download_url" : "https://github.com/gioxx/wp-gwcustomwidgets/releases/download/0.22/wp-gwcustomwidgets.zip",
 	"requires" : "6.2",
-	"tested" : "6.2.1",
+	"tested" : "6.3.2",
 	"requires_php" : "8.0",
     	"added" : "2015-08-21 00:00:00",
 	"last_updated" : "2023-10-25 18:00:00",
