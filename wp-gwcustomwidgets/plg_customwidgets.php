@@ -4,7 +4,7 @@
 	Plugin URI: https://gioxx.org/
 	Description: Widget personalizzati per la Sidebar di Gioxx's Wall.
 	Author: Gioxx
-	Version: 0.22
+	Version: 0.23
 	Author URI: https://gioxx.org
 	License: GPL3
 */
@@ -28,7 +28,7 @@ if ( !class_exists('gwplgUpdateChecker_wdg') ) {
 
 		public function __construct() {
 			$this->plugin_slug = plugin_basename( __DIR__ );
-			$this->version = '0.21';
+			$this->version = '0.23';
 			$this->cache_key = 'customwidgets_updater';
 			$this->cache_allowed = true;
 
