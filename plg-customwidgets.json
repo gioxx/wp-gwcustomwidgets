@@ -13,7 +13,7 @@
 	"last_updated" : "2024-07-04 21:30:00",
     	"homepage" : "https://gioxx.org",
 	"sections" : {
-		"description" : "Widget personalizzati che compaiono nella barra laterale di Gioxx's Wall: pillole, banco prova e molto altro ancora.",
+		"description" : "Widget personalizzati che compaiono nella barra laterale di Gioxx's Wall: pillole, banco prova, ...",
 		"installation" : "Un clic sul pulsante di attivazione.",
 		"changelog" : "Il changelog è sempre disponibile all'indirizzo https://github.com/gioxx/wp-gwcustomwidgets/blob/main/README.md"
 	},
