@@ -4,7 +4,7 @@
 	Plugin URI: https://gioxx.org/
 	Description: Widget personalizzati per la Sidebar di Gioxx's Wall.
 	Author: Gioxx
-	Version: 0.23
+	Version: 0.24
 	Author URI: https://gioxx.org
 	License: GPL3
 */
@@ -28,7 +28,7 @@ if ( !class_exists('gwplgUpdateChecker_wdg') ) {
 
 		public function __construct() {
 			$this->plugin_slug = plugin_basename( __DIR__ );
-			$this->version = '0.23';
+			$this->version = '0.24';
 			$this->cache_key = 'customwidgets_updater';
 			$this->cache_allowed = true;
 
@@ -618,23 +618,23 @@ class wdg_BancoProvaConsole extends WP_Widget {
 		<?php
       the_excerpt();
       endwhile;
-      // Blocco new gaming.gioxx.org, thanks to https://pippinsplugins.com/using-wp_remote_get-to-parse-json-from-remote-apis/
-			$request = wp_safe_remote_get('https://gioxx.org/sub/gwg.json');
-			if( is_wp_error( $request ) ) {
-				return false; // Bail early
-			}
-			$body = wp_remote_retrieve_body( $request );
-			$data = json_decode( $body );
-			if( ! empty( $data ) ) {
-        echo '<p class="othernews">Qui di seguito invece ti elenco le ultime notizie pubblicate su &quot;<em><a href="https://gaming.gioxx.org" />G:Gaming&Tech</a></em>&quot;:</p>';
-				echo '<ul class="fa-ul gwallselection">';
-				foreach( $data->items as $item ) {
-					echo '<li><span class="fa-li"><i class="fab fa-xbox"></i></span> ';
-						echo '<a href="' . esc_url( $item->link ) . '">' . $item->title . '</a>';
-					echo '</li>';
-				}
-				echo '</ul>';
-			}
+      // // Blocco new gaming.gioxx.org, thanks to https://pippinsplugins.com/using-wp_remote_get-to-parse-json-from-remote-apis/
+			// $request = wp_safe_remote_get('https://gioxx.org/sub/gwg.json');
+			// if( is_wp_error( $request ) ) {
+			// 	return false; // Bail early
+			// }
+			// $body = wp_remote_retrieve_body( $request );
+			// $data = json_decode( $body );
+			// if( ! empty( $data ) ) {
+      //   echo '<p class="othernews">Qui di seguito invece ti elenco le ultime notizie pubblicate su &quot;<em><a href="https://gaming.gioxx.org" />G:Gaming&Tech</a></em>&quot;:</p>';
+			// 	echo '<ul class="fa-ul gwallselection">';
+			// 	foreach( $data->items as $item ) {
+			// 		echo '<li><span class="fa-li"><i class="fab fa-xbox"></i></span> ';
+			// 			echo '<a href="' . esc_url( $item->link ) . '">' . $item->title . '</a>';
+			// 		echo '</li>';
+			// 	}
+			// 	echo '</ul>';
+			// }
 
     echo $args['after_widget'];
   }
