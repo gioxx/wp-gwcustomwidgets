@@ -3,7 +3,7 @@
  * Plugin Name:         Custom Widgets per Gioxx's Wall
  * Plugin URI:          https://gioxx.org/
  * Description:         Widget personalizzati per la Sidebar di Gioxx's Wall, ora aggiornabili tramite Git Updater.
- * Version:             0.26
+ * Version:             0.27
  * Author:              Gioxx
  * Author URI:          https://gioxx.org
  * License:             GPL3
@@ -36,7 +36,7 @@ if ( ! class_exists( 'GWCustomWidgets' ) ) {
                 'gwcustomwidgets-styles',
                 plugin_dir_url( __FILE__ ) . 'css/plg_customwidgets.css',
                 array(),
-                '0.26'
+                '0.27'
             );
         }
 
@@ -205,7 +205,7 @@ class GWCustomWidgets_Widget_Donazioni extends WP_Widget {
                 </a>
             </li>
         </ul>
-        <p><?php esc_html_e( 'Oppure:', 'wp-gwcustomwidgets' ); ?></p>
+        <p style="margin-top: 1em;"><?php esc_html_e( 'Oppure:', 'wp-gwcustomwidgets' ); ?></p>
         <ul class="fa-ul gwalldonate">
             <li>
                 <span class="fa-li"><i class="fas fa-coffee"></i></span>
@@ -220,7 +220,7 @@ class GWCustomWidgets_Widget_Donazioni extends WP_Widget {
                 </a>
             </li>
         </ul>
-        <p style="font-size:0.7em;">
+        <p style="font-size: 0.7em; margin-top: 1em;">
             <?php esc_html_e( 'In qualità di Affiliato Amazon ricevo un guadagno dagli acquisti idonei senza alcun costo aggiuntivo per te.', 'wp-gwcustomwidgets' ); ?>
         </p>
         <?php
