@@ -3,7 +3,7 @@
  * Plugin Name:         Custom Widgets per Gioxx's Wall
  * Plugin URI:          https://gioxx.org/
  * Description:         Widget personalizzati per la Sidebar di Gioxx's Wall, ora aggiornabili tramite Git Updater.
- * Version:             0.27
+ * Version:             0.28
  * Author:              Gioxx
  * Author URI:          https://gioxx.org
  * License:             GPL3
@@ -36,7 +36,7 @@ if ( ! class_exists( 'GWCustomWidgets' ) ) {
                 'gwcustomwidgets-styles',
                 plugin_dir_url( __FILE__ ) . 'css/plg_customwidgets.css',
                 array(),
-                '0.27'
+                '0.28'
             );
         }
 
@@ -209,7 +209,7 @@ class GWCustomWidgets_Widget_Donazioni extends WP_Widget {
         <ul class="fa-ul gwalldonate">
             <li>
                 <span class="fa-li"><i class="fas fa-coffee"></i></span>
-                <a href="https://www.buymeacoffee.com/gioxx" target="_blank">
+                <a href="https://coff.ee/gioxx" target="_blank">
                     <?php esc_html_e( 'Buy Me A Coffee (offrimi un caffè)', 'wp-gwcustomwidgets' ); ?>
                 </a>
             </li>
